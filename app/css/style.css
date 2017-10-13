@@ -100,6 +100,9 @@ button{
 /*STYLE RESET END*/
 
 /*DEFAULT-CLASSES START*/
+.title.big{
+    font-size: 52px;
+}
 .flex-container{
     display: -webkit-box;
     display: -webkit-flex;
@@ -267,7 +270,8 @@ a:hover{
 .product-item .item-img img{
     max-height: 100%;
 }
-.product-item .item-title{
+.product-item .item-title,
+.product-item .sizes{
     margin-bottom: 30px;
     white-space: nowrap;
     overflow: hidden;
@@ -289,7 +293,6 @@ a:hover{
 .product-item .more-info-on-hover{
     opacity: 0;
     position: absolute;
-    bottom: 30px;
     left: 0;
     width: 100%;
     padding: 0 50px;
@@ -306,8 +309,15 @@ a:hover{
     height: 90px;
 }
 .product-item .colors{
+    display: inline-block;
     border-bottom: 1px solid #f2f4f7;
     padding-bottom: 30px;
+}
+.product-item .item-controls{
+    padding-top: 29px;
+}
+.product-item .item-controls li+li{
+    padding-left: 21px;
 }
 .product-item li{
     display: inline-block;
@@ -404,7 +414,7 @@ input[type="checkbox"]:checked + label::before{
     outline: none;
 }
 .adv-block{
-    padding: 30px 0;
+    padding: 27px 0;
     border: 1px solid #eaedef;
 }
 .adv-area{
@@ -471,9 +481,11 @@ input[type="checkbox"]:checked + label::before{
     font-size: 18px;
     font-family: 'Harmonia_semibold';
 }
-.new-arrivals .title+span,
-.best-sales .title+span{
+.subtitle{
     font-size: 16px;
+}
+.sale-carousel .subtitle{
+    margin-top: 18px;
 }
 .new-arrivals .container,
 .best-sales .container{
@@ -493,10 +505,11 @@ input[type="checkbox"]:checked + label::before{
 }
 .kit{
     border: 1px solid #eaedef;
+    height: 99px;
 }
 .sales-block{
     position: relative;
-    top: 15px;
+    margin: 0 30px;
 }
 .sales-block .light-orange-bg,
 .sales-block .orange-bg{
@@ -518,9 +531,9 @@ input[type="checkbox"]:checked + label::before{
     top: 0;
 }
 .sales-block .sale-orange-badge{
-    position: relative;
-    bottom: 45px;
-    left: 2px;
+    position: absolute;
+    bottom: 18px;
+    left: 7px;
     text-align: center;
 }
 .sales-block .sale-orange-badge span{
@@ -535,25 +548,36 @@ input[type="checkbox"]:checked + label::before{
     font-size: 18px;
     font-family: 'Harmonia_black';
 }
+.kit .sales-info-block{
+    padding-right: 40px;
+    border-right: 1px solid #f5f5f6;
+}
 .kit .sales-info-block .title{
     margin-bottom: 15px;
+    font-size: 22px;
 }
 .kit .sales-price-block .price{
     font-size: 32px;
     font-family: 'Harmonia_black';
     padding-left: 10px;
 }
+.kit .price .smalldollar{
+    font-size: 22px;
+}
 .category-wrap .col-md-9 .row + .row{
     margin-top: 30px;
 }
 .category-wrap .col-md-9 .product-item{
     margin-bottom: 30px;
-}.best-sales .best-items {
+}
+
+.best-sales .best-items {
      padding: 36px 28px;
  }
 
 .best-items {
     position: relative;
+    height: 160px;
 }
 
 .best-item-description {
@@ -562,16 +586,7 @@ input[type="checkbox"]:checked + label::before{
     font-family: 'Harmonia_bold';
     font-size: 18px;
     position: relative;
-}
-
-.best-item-description::before {
-    content: '';
     border-left: 1px solid #f5f5f6;
-    left: 0;
-    top: 5px;
-    display: block;
-    position: absolute;
-    height: 62px;
 }
 
 .best-items .best-item-title {
@@ -634,7 +649,8 @@ input[type="checkbox"]:checked + label::before{
 
 .add-to-cart-on-hover span {
     font-family: 'Harmonia_semibold';
-    padding-top: 5px;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 .add-to-cart-on-hover:hover span {
@@ -665,7 +681,7 @@ input[type="checkbox"]:checked + label::before{
     font-family: 'Harmonia_semibold';
     font-size: 14px;
     padding: 17px 28px;
-    margin-left: 160px;
+    margin-left: 30px;
 }
 
 .btn-default:hover {
@@ -675,10 +691,10 @@ input[type="checkbox"]:checked + label::before{
 
 input[type="text"] {
     margin-left: 8px;
-    padding-top: 5px;
     font-family: "Harmonia_italic";
     font-size: 14px;
     color: #7c8791;
+    width: 300px;
 }
 
 .aside-section {
@@ -842,6 +858,7 @@ footer {
     display: block;
     margin-bottom: 18px;
     font-family: "Harmonia_semibold";
+    font-size: 16px;
 }
 
 .payment-methods .payment-methods-icon li+li {
