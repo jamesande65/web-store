@@ -337,6 +337,9 @@ a:hover{
     -webkit-border-radius: 50%;
             border-radius: 50%;
 }
+.new-arrivals .load-more{
+    margin-top: 80px;
+}
 .load-more .row{
     min-height: 80px;
 }
@@ -795,12 +798,32 @@ input[type="checkbox"]:checked + label {
 input[type="checkbox"]:checked + label::before {
     border-color: #ff5912;
 }
-
 input[type="number"] {
-    background-color: #edf0f2;
-    margin-left: 10px;
-    width: 45px;
-    height: 25px;
+    width: 65px;
+    height: 32px;
+    color: #ff5912;
+    font-size: 18px;
+}
+.jq-number {
+    margin-left: 20px;
+}
+.jq-number__field,
+.jq-number__field:focus {
+    height: 32px;
+    width: 100%;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.jq-number__spin,
+.jq-number__spin:hover{
+    border: none;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.jq-number__spin.plus {
+     left: 75px;
 }
 
 .ui-widget.ui-widget-content {
