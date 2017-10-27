@@ -223,6 +223,9 @@ a:hover{
 .header .bottom-header .user-controls{
     margin-left: auto;
 }
+.user-controls a{
+    display: inline-block;
+}
 .user-controls a + a{
     margin-left: 25px;
 }
@@ -232,13 +235,15 @@ a:hover{
 }
 .user-controls .icon-index{
     background-color: #34404b;
-    padding: 0 7px;
+    width: 14px;
+    height: 14px;
+    text-align: center;
     border-radius: 50%;
     font: 10px/1 "Harmonia_light", sans-serif;
     line-height: 2em;
     color: #fff;
     position: absolute;
-    top: -21px;
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -294,12 +299,12 @@ a:hover{
 }
 .product-item .colors{
     display: inline-block;
-    border-bottom: 1px solid #f2f4f7;
     padding-bottom: 30px;
 }
 .product-item .item-controls{
     padding-top: 29px;
     align-items: center;
+    border-top: 1px solid #f2f4f7;
 }
 .product-item li{
     display: inline-block;
@@ -375,6 +380,7 @@ input[type="checkbox"]:checked + label::before{
     position: absolute;
     bottom: 200%;
     color: #34404b;
+    font-family: 'Harmonia_semibold';
 }
 .ui-slider .ui-slider-range{
     background-color: #34404b;
@@ -467,15 +473,10 @@ input[type="checkbox"]:checked + label::before{
 }
 .sale-carousel .subtitle{
     margin-top: 18px;
+    margin-bottom: 60px;
 }
 .item-carousel-description p:last-child{
     font-size: 16px;
-}
-.item-carousel-description p{
-    margin: 20px 0;
-}
-.item-carousel-description .carousel-order-now{
-    padding-top: 60px;
 }
 .item-carousel-description .carousel-order-now a{
     padding-left: 30px;
@@ -661,6 +662,7 @@ input[type="checkbox"]:checked + label::before{
     font-size: 18px;
     padding: 17px 28px;
     margin-left: 30px;
+    line-height: 1;
 }
 
 .btn-found:hover {
@@ -741,10 +743,11 @@ input[type="checkbox"]:checked + label::before {
     border-color: #ff5912;
 }
 input[type="number"] {
-    width: 65px;
+    width: 55px;
     height: 32px;
     color: #ff5912;
     font-size: 18px;
+    background-color: #edf0f2;
 }
 .jq-number {
     margin-left: 20px;
@@ -776,14 +779,6 @@ input[type="number"] {
 .ui-slider .ui-slider-range {
     background-color: #34404b;
 }
-
-.min-value,
-.max-value {
-    position: absolute;
-    bottom: 200%;
-    color: #34404b;
-}
-
 .ui-widget-content .ui-state-default.ui-slider-handle {
     width: 11px;
     height: 11px;
@@ -935,8 +930,13 @@ footer {
     font-size: 18px;
 }
 .product-description-info{
-    padding: 40px 0;
+    padding-top: 40px;
     line-height: 1.8em;
+}
+.product-description-info.short-text{
+    max-width: 345px;
+    padding-top: 5px;
+    padding-bottom: 40px;
 }
 .product-description .order-form{
     padding: 40px 0;
